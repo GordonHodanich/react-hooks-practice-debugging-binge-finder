@@ -31,6 +31,7 @@ function App() {
   }
 
   function selectShow(show) {
+    // console.log(show)
     Adapter.getShowEpisodes(show.id).then((episodes) => {
       setSelectedShow(show);
       setEpisodes(episodes);

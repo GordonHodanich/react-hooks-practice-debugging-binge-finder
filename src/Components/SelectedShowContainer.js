@@ -19,10 +19,11 @@ function SelectedShowContainer(props) {
   }
 
   function mapEpisodes() {
-    return props.episodes
+
+    return props.allEpisodes
     .filter((e) => e.season === parseInt(selectedSeason)) 
     .map((e) => {
-        return <Episode eachEpisode={e} key={e.id} />;
+        return <Episode myEpisode={e} key={e.id} />;
     });
   }
 
