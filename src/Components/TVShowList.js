@@ -5,7 +5,7 @@ import TVShow from "./TVShow"
 function TVShowList(props) {
   function mapAllShows() {
     if (!!props.searchTerm) {
-      return props.shows
+       return props.shows
       .filter((s) => s.name.toLowerCase().includes(props.searchTerm)) 
       .map((s) => {
           return <TVShow show={s} key={s.id} selectShow={props.selectShow} />;
